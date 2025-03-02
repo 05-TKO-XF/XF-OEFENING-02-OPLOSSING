@@ -1,0 +1,50 @@
+{% extends 'sjabloon.html' %}
+
+{% load static %}
+
+{% block inhoud %}
+<div id="inhoudIndex">
+    <div class="text-center">
+        <h1 class="display-3">
+            Over Fietsdokter
+        </h1>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div id="inhoudLinks" class="col-lg-6">
+                <h2>Andr&eacute; Merckx</h2>
+                <ul>
+                    <li>Fietsenfreak</li>
+                    <li>Kunsthistoricus</li>
+                    <li>Gediplomeerd fietsenmaker</li>
+                    <li>Kempische roots</li>
+                    <li>Vader van drie</li>
+                </ul>
+                <h2>Lichaam, geest en milieu op één lijn</h2>
+                <p>Kies je voor de fiets, dan maak je méér dan louter een mobiliteitskeuze. Een stadsfietser ervaart
+                    niks dan voordelen: het lichaam wordt getraind, de geest is vrij, je staat niet in de file, verliest
+                    geen tijd en hebt volop vrijheid. De fiets, aangedreven door je eigen spierkracht, is bovendien de
+                    beste keuze voor het milieu en draagt bij tot de leefbaarheid van de stad.</p>
+            </div>
+            <div id="inhoudRechts" class="col-lg-6">
+                <h2>Overtuigd van Oostende,<br />overtuigd van de fiets</h2>
+                <p>Ik ben, zoals zovelen, jaren geleden blijven plakken in Gent. De liefde voor de stad groeide en met
+                    die liefde ook mijn dagdagelijks fietsgebruik. De fiets is het ideale vervoermiddel in de stad, want
+                    het is snel, betrouwbaar en efficiënt, ook met kinderen.</p>
+                <h2>Ecologisch verantwoord</h2>
+                <p>Als fietsenmaker draag ik graag mijn steentje bij aan het milieu. Ik rijd zelf met de bakfiets tot
+                    bij de fiets die moet worden hersteld en werk met biologisch afbreekbare smeermiddelen. Mijn
+                    fietsenmakers-afval wordt afgevoerd door de fietskoeriers van Cargo Vélo en als het om nieuwe
+                    fietsen gaat kies ik zoveel mogelijk voor merken die lokaal produceren.</p>
+            </div>
+            <div class="row" id="inhoudIndexAfbeeldingen">
+                <img src="{% static 'afbeeldingen/f101.jpg' %}" class="col" />
+                <img src="{% static 'afbeeldingen/f102.jpg' %}" class="col" />
+                <img src="{% static 'afbeeldingen/f103.jpg' %}" class="col" />
+                <img src="{% static 'afbeeldingen/f104.jpg' %}" class="col" />
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

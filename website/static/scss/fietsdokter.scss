@@ -1,0 +1,65 @@
+#paginaKop {
+    background-image: url(../assets/banner.jpg) ;
+    background-size: cover;
+    background-position: top center;
+    padding: 30px 0;
+
+    .nav-item {
+        background-color: rgba(0,0,0,0.66);
+        margin-left: 2px;
+        border-radius: 8px;
+        padding: 0 12px;
+
+        a {
+            color: #fff !important;
+        }
+        
+    }
+}
+
+#paginaInhoud {
+    padding: 30px 0;
+
+    #adresWerkplaats {
+        font-size: 110%;
+        text-align: center;
+    }
+}
+
+#paginaVoet {
+    background-color: #333;
+    color: white;
+    padding: 25px 0 50px;
+
+    #paginaVoetNavigatie {
+        list-style: none;
+
+        li {
+            a {
+                text-decoration: none;
+                color: #CCC;
+
+                &:hover {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+
+    #paginaVoetLogos {
+        text-align: right;
+
+        img {
+            height: auto;
+            width: 18%;
+            margin: 0 0 10px 2%;
+        }
+    }
+
+    #paginaVoetCopyright {
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+    }
+}

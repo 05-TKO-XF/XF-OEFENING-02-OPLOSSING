@@ -1,0 +1,98 @@
+{% extends 'sjabloon.html' %}
+
+{% load static %}
+
+{% block inhoud %}
+<div id="inhoudContact">
+    <div class="text-center">
+        <h1 class="display-3">
+            Contact
+        </h1>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div id="inhoudLinks" class="col-lg-6">
+                <h3 class="text-center">Adres werkplaats</h3>
+                <hr>
+                <div id="adresWerkplaats">
+                    <p>
+                        <strong>De fietsendokter</strong><br />
+                        Leopold-III-laan 1 - 8400 Oostende<br />
+                        tel: 0477.68.68.68
+                    </p>
+                    <hr>
+                    <p>
+                        <a href="http://maps.google.com/?q=Leopold-III-laan 1 8400 Oostende" target="_blank"
+                            class="btn btn-primary w-100">
+                            Toon ligging werkplaats in google maps
+                        </a>
+                    </p>
+                </div>
+                {% if fouten %}
+                    <div class="alert alert-warning">
+                        <h3 class="text-center">Fout formulier</h3>
+                        <hr>
+                        <p>Corrigeer volgende foutieve invoer en verstuur opnieuw.</p>
+                        <ul>
+                            {% for fout in fouten %}
+                                <li>{{ fout }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+            <div id="inhoudRechts" class="col-lg-6">
+                {% if email_verstuurd == True %}
+                <div class="alert alert-success text-center">
+                    <h3>Succes</h3>
+                    <hr>
+                    <p>Uw bericht werd met succes verstuurd. <br>Wij nemen zo nodig contact met u op.</p>
+                </div>
+                {% else %}
+                <p>
+                    Hebt u vragen of bijkomende inlichtingen nodig, maak dan gebruik van onderstaand formulier.
+                </p>
+                <form method="post" action="">
+
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="frmNaam" class="form-label">Uw naam en voornaam <sup>*</sup></label>
+                        <input id="frmNaam" name="frmNaam" type="text" class="form-control"
+                            value="{% if formulierVariabelen %}{{ formulierVariabelen.frmNaam }}{% endif %}" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="frmEMail" class="form-label">Uw e-mail <sup>*</sup></label>
+                        <input id="frmEMail" name="frmEmail" type="email" class="form-control"
+                            value="{% if formulierVariabelen %}{{ formulierVariabelen.frmEmail }}{% endif %}" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="frmTelefoon" class="form-label">Mobiel nummer (enkel cijfers) <sup>*</sup></label>
+                        <input id="frmTelefoon" name="frmTelefoon" type="text" class="form-control"
+                            value="{% if formulierVariabelen %}{{ formulierVariabelen.frmTelefoon }}{% endif %}" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="frmBericht" class="form-label">Uw vraag, bericht of boodschap <sup>*</sup></label>
+                        <textarea id="frmBericht" name="frmBericht"
+                            class="form-control">{% if formulierVariabelen %}{{ formulierVariabelen.frmBericht }}{% endif %}</textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <sup>*</sup> verplichte velden
+                    </div>
+
+                    <div class="mb-3">
+                        <button id="frmBtnVerstuur" class="btn btn-primary float-end" type="submit">
+                            Verstuur
+                        </button>
+                    </div>
+                </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

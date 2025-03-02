@@ -1,0 +1,49 @@
+{% extends 'sjabloon.html' %}
+
+{% load static %}
+
+{% block inhoud %}
+<div id="inhoudAanhuis">
+    <div class="text-center">
+        <h1 class="display-3">
+            Fietsreparatie aan huis
+        </h1>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div id="inhoudLinks" class="col-lg-6">
+                <h2>Herstelling aan huis</h2>
+                <p>Ik fiets tot bij jou thuis (of werk, hobbyclub …) met mijn bakfiets om je fiets te herstellen. Het
+                    nodige
+                    materiaal breng ik mee in mijn rijdende werkbank. Zo is je fiets snel weer rijklaar. Comfortabel,
+                    kwaliteitsvol én goed voor het milieu!</p>
+                <p>Een kleine herstelling, een groot onderhoud, een fiets volledig in orde zetten … Bakfiets,
+                    kinderfiets,
+                    stadsfiets of koersfiets … alle fietsen zijn bij mij in goede handen.</p>
+                <h2>En de kosten?</h2>
+                <p>Ik werk aan een uurtarief van 36 euro. Je betaalt verder een vaste verplaatsingskost van 5 euro en de
+                    prijs van eventuele onderdelen. (Prijzen zijn exclusief BTW).</p>
+                <p>Betalen kan cash, elektronisch of met ecocheques.</p>
+                <h2>Evenementen</h2>
+                <p>Een markt, rommelmarkt, straatfeest, foodevenement …? Contacteer mij gerust als je mij als
+                    fietsenmaker
+                    wil boeken.</p>
+            </div>
+            <div id="inhoudRechts" class="col-lg-6">
+                <h2>Waar rijd ik?</h2>
+                <p>Je mag mij met mijn bakfiets verwachten in:</p>
+                <ul>
+                    <li>8400 <strong>Oostende</strong></li>
+                    <li>8400 <strong>Zandvoorde</strong></li>
+                    <li>8460 <strong>Oudenburg</strong></li>
+                    <li>8430 <strong>Middelkerke</strong></li>
+                    <li>8450 <strong>Bredene</strong></li>
+                    <li>8470 <strong>Gistel</strong></li>
+                </ul>
+                <img src="{% static 'afbeeldingen/f200.jpg' %}" class="w-100">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="favorite icon" type="image/png" href="{% static 'assets/favicon.png' %}">
+
+    <script src="{% static 'libs/jquery.js' %}"></script>
+
+    {% csrf_token %}
+
+    {% load django_bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load bootstrap_icons %}
+
+    <link rel="stylesheet" href="{% static 'css/fietsdokter.min.css' %}">
+    <script src="{% static 'js/fietsdokter.js' %}"></script>
+
+    <title>Fietsdokter: {{ titel }}</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="paginaKop">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img src="{% static 'assets/logo.png' %}">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Fietsdokter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aanhuis">Fietsreparatie aan huis</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/winkel">Winkel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="paginaInhoud">
+        <div class="row">
+            {% block inhoud%}
+            {% endblock %}
+        </div>
+    </div>
+
+    <div id="paginaVoet">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul id="paginaVoetNavigatie">
+                        <li>
+                            <a href="/">Fietsdokter</a>
+                        </li>
+                        <li>
+                            <a href="/aanhuis">Fietsreparatie aan huis</a>
+                        </li>
+                        <li>
+                            <a href="/winkel">Winkel</a>
+                        </li>
+                        <li>
+                            <a href="/contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8" id="paginaVoetLogos">
+                    <img src="{% static 'afbeeldingen/logos/achielle.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/bullitt.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/contoura.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/dahon.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/hartje.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/noxon.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/onderwater.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/prince.jpg' %}">
+                    <img src="{% static 'afbeeldingen/logos/surly.jpg' %}">
+                </div>
+            </div>
+            <div class="row text-center" id="paginaVoetCopyright">
+                copyright &copy;{{ jaar }} - fietsdokter Andr&eacute; Merckx
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

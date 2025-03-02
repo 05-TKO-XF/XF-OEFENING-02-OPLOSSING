@@ -1,0 +1,45 @@
+{% extends 'sjabloon.html' %}
+
+{% load static %}
+
+{% block inhoud %}
+<div id="inhoudWinkel">
+    <div class="text-center">
+        <h1 class="display-3">
+            Winkel &amp; Werklplaats
+        </h1>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row">
+            <div id="inhoudLinks" class="col-lg-6">
+                <h2>De geknipte fiets</h2>
+                <p>Op zoek naar een nieuwe fiets? Bij Tuub vind je een selectie degelijke, duurzame fietsen op maat van
+                    de Gentse stadsfietser. Ik neem graag de tijd om je uitgebreid advies te geven, de verschillende
+                    modellen en opties toe te lichten, je een testrit te laten doen. Samen vinden we dé geknipte fiets
+                    voor jou.</p>
+                <h2>Unieke service</h2>
+                <P>Ik wil méér doen dan je een fiets verkopen. Daarom krijg je bij je aankoop deze unieke service: het
+                    eerste onderhoud is gratis, later onderhoud en herstellingen gebeuren op de locatie van jouw keuze
+                    (binnen mijn werkgebied). Een surplus: ik geef voor acute herstellingen voorrang aan fietsen die bij
+                    mij zijn aangekocht. Zo heb jij de garantie dat je nooit lang zonder fiets zit.</P>
+                <h2>Alles voor je fiets</h2>
+                <p>Fietsendokter, de winkel is de plek voor fietstassen, mandjes, helmen, kinderstoeltjes, sloten ...
+                </p>
+            </div>
+            <div id="inhoudRechts" class="col-lg-6">
+                <h2>Adres werkplaats</h2>
+                <p><strong>De fietsendokter</strong><br />
+                    Leopild-III-laan 1 - 8400 Oostende<br />
+                    tel: 0477.68.68.68
+                </p>
+                <h2>Open of dicht</h2>
+                <p>De winkel is open <br />
+                    van woensdag t.e.m. zaterdag<br />
+                    telkens van 14u tot 18u of op afspraak.</p>
+                <img src="{% static 'afbeeldingen/f300.jpg' %}" class="w-100">
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
